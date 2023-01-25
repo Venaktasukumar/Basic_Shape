@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-class Basic_Shape {
+class Basicshape {
     double length;
     double breadth;
     double radius;
@@ -11,15 +11,15 @@ class Basic_Shape {
     double height;
     double area;
     double perimeter;
-    Basic_Shape(double l, double br){
+    Basicshape(double l, double br){
         length=l;
         breadth=br;
     }
-    Basic_Shape(double r){
+    Basicshape(double r){
 
         radius=r;
     }
-     Basic_Shape(double s1, double s2,double s3,double b,double h){
+     Basicshape(double s1, double s2,double s3,double b,double h){
         side_length1=s1;
         side_length2=s2;
         side_length3=s3;
@@ -78,7 +78,7 @@ class Basic_Shape {
                 double height=sc.nextDouble();
                 System.out.println("enter the base");
                 double base=sc.nextDouble();
-                Basic_Shape t=new Basic_Shape(side1,side2,side3,base,height);
+                Basicshape t=new Basicshape(side1,side2,side3,base,height);
                 System.out.println(t.Area(shape_type));
                 System.out.println(t.Perimeter(shape_type));
             }
@@ -87,14 +87,14 @@ class Basic_Shape {
                 double length=sc.nextDouble();
                 System.out.println("enter the breadth");
                 double breadth=sc.nextDouble();
-                Basic_Shape re=new Basic_Shape(length,breadth);
+                Basicshape re=new Basicshape(length,breadth);
                 System.out.println(re.Area(shape_type));
                 System.out.println(re.Perimeter(shape_type));
             }
             else if(shape_type.equals("circle")){
                 System.out.println("enter the radius");
                 double radius=sc.nextDouble();
-                Basic_Shape c=new Basic_Shape(radius);
+                Basicshape c=new Basicshape(radius);
                 System.out.println(c.Area(shape_type));
                 System.out.println(c.Perimeter(shape_type));
             }
