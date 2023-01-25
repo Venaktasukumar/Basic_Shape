@@ -1,24 +1,25 @@
 package org.example;
 import java.util.Scanner;
 class Basic_Shape {
-    int length;
-    int breadth;
-    int radius;
-    int side_length1;
-    int side_length2;
-    int side_length3;
-    int base;
-    int height;
+    double length;
+    double breadth;
+    double radius;
+    double side_length1;
+    double side_length2;
+    double side_length3;
+    double base;
+    double height;
     double area;
     double perimeter;
-    Basic_Shape(int l, int br){
+    Basic_Shape(double l, double br){
         length=l;
         breadth=br;
     }
-    Basic_Shape(int r){
+    Basic_Shape(double r){
+
         radius=r;
     }
-     Basic_Shape(int s1, int s2,int s3,int b,int h){
+     Basic_Shape(double s1, double s2,double s3,double b,double h){
         side_length1=s1;
         side_length2=s2;
         side_length3=s3;
@@ -68,31 +69,31 @@ class Basic_Shape {
             shape_type=shape_type.toLowerCase();
             if(shape_type.equals("triangle")){
                 System.out.println("enter the side1");
-                int side1=sc.nextInt();
+                double side1=sc.nextDouble();
                 System.out.println("enter the side2");
-                int side2=sc.nextInt();
+                double side2=sc.nextDouble();
                 System.out.println("enter the side3");
-                int side3=sc.nextInt();
+                double side3=sc.nextDouble();
                 System.out.println("enter the height");
-                int height=sc.nextInt();
+                double height=sc.nextDouble();
                 System.out.println("enter the base");
-                int base=sc.nextInt();
+                double base=sc.nextDouble();
                 Basic_Shape t=new Basic_Shape(side1,side2,side3,base,height);
                 System.out.println(t.Area(shape_type));
                 System.out.println(t.Perimeter(shape_type));
             }
             else if(shape_type.equals("rectangle")){
                 System.out.println("enter the length");
-                int length=sc.nextInt();
+                double length=sc.nextDouble();
                 System.out.println("enter the breadth");
-                int breadth=sc.nextInt();
+                double breadth=sc.nextDouble();
                 Basic_Shape re=new Basic_Shape(length,breadth);
                 System.out.println(re.Area(shape_type));
                 System.out.println(re.Perimeter(shape_type));
             }
             else if(shape_type.equals("circle")){
                 System.out.println("enter the radius");
-                int radius=sc.nextInt();
+                double radius=sc.nextDouble();
                 Basic_Shape c=new Basic_Shape(radius);
                 System.out.println(c.Area(shape_type));
                 System.out.println(c.Perimeter(shape_type));
