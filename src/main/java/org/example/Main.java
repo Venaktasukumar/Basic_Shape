@@ -65,9 +65,9 @@ class Basicshape {
             System.out.println("3.circle");
             System.out.println("4.Exit");
             System.out.print("enter the shape type:");
-            String shape_type=sc.next();
-            shape_type=shape_type.toLowerCase();
-            if(shape_type.equals("triangle")){
+            String shapetype=sc.next();
+            shapetype=shapetype.toLowerCase();
+            if(shapetype.equals("triangle")){
                 System.out.println("enter the side1");
                 double side1=sc.nextDouble();
                 System.out.println("enter the side2");
@@ -79,24 +79,24 @@ class Basicshape {
                 System.out.println("enter the base");
                 double base=sc.nextDouble();
                 Basicshape t=new Basicshape(side1,side2,side3,base,height);
-                System.out.println(t.areA(shape_type));
-                System.out.println(t.perimeteR(shape_type));
+                System.out.println(t.areA(shapetype));
+                System.out.println(t.perimeteR(shapetype));
             }
-            else if(shape_type.equals("rectangle")){
+            else if(shapetype.equals("rectangle")){
                 System.out.println("enter the length");
                 double length=sc.nextDouble();
                 System.out.println("enter the breadth");
                 double breadth=sc.nextDouble();
                 Basicshape re=new Basicshape(length,breadth);
-                System.out.println(re.areA(shape_type));
-                System.out.println(re.perimeteR(shape_type));
+                System.out.println(re.areA(shapetype));
+                System.out.println(re.perimeteR(shapetype));
             }
-            else if(shape_type.equals("circle")){
+            else if(shapetype.equals("circle")){
                 System.out.println("enter the radius");
                 double radius=sc.nextDouble();
                 Basicshape c=new Basicshape(radius);
-                System.out.println(c.areA(shape_type));
-                System.out.println(c.perimeteR(shape_type));
+                System.out.println(c.areA(shapetype));
+                System.out.println(c.perimeteR(shapetype));
             }
             else{
                 break;
