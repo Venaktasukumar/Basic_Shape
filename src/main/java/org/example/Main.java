@@ -4,9 +4,9 @@ class Basicshape {
     double length;
     double breadth;
     double radius;
-    double side_length1;
-    double side_length2;
-    double side_length3;
+    double sidelength1;
+    double sidelength2;
+    double sidelength3;
     double base;
     double height;
     double area;
@@ -20,13 +20,13 @@ class Basicshape {
         radius=r;
     }
      Basicshape(double s1, double s2,double s3,double b,double h){
-        side_length1=s1;
-        side_length2=s2;
-        side_length3=s3;
+        sidelength1=s1;
+        sidelength2=s2;
+        sidelength3=s3;
         base=b;
         height=h;
     }
-    public double Area(String s){
+    public double areA(String s){
         if(s.equals("triangle")){
             area=0.5*base*height;
             return area;
@@ -41,9 +41,9 @@ class Basicshape {
         }
         return 0.0;
     }
-    public double Perimeter(String h){
+    public double perimeteR(String h){
         if(h.equals("triangle")){
-            perimeter=side_length1+side_length2+side_length3;
+            perimeter=sidelength1+sidelength2+sidelength3;
             return perimeter;
         }
         else if(h.equals("rectangle")){
@@ -79,8 +79,8 @@ class Basicshape {
                 System.out.println("enter the base");
                 double base=sc.nextDouble();
                 Basicshape t=new Basicshape(side1,side2,side3,base,height);
-                System.out.println(t.Area(shape_type));
-                System.out.println(t.Perimeter(shape_type));
+                System.out.println(t.areA(shape_type));
+                System.out.println(t.perimeteR(shape_type));
             }
             else if(shape_type.equals("rectangle")){
                 System.out.println("enter the length");
@@ -88,15 +88,15 @@ class Basicshape {
                 System.out.println("enter the breadth");
                 double breadth=sc.nextDouble();
                 Basicshape re=new Basicshape(length,breadth);
-                System.out.println(re.Area(shape_type));
-                System.out.println(re.Perimeter(shape_type));
+                System.out.println(re.areA(shape_type));
+                System.out.println(re.perimeteR(shape_type));
             }
             else if(shape_type.equals("circle")){
                 System.out.println("enter the radius");
                 double radius=sc.nextDouble();
                 Basicshape c=new Basicshape(radius);
-                System.out.println(c.Area(shape_type));
-                System.out.println(c.Perimeter(shape_type));
+                System.out.println(c.areA(shape_type));
+                System.out.println(c.perimeteR(shape_type));
             }
             else{
                 break;
