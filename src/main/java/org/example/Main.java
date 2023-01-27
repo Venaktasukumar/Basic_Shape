@@ -1,5 +1,7 @@
 package org.example;
 import java.util.Scanner;
+import java.util.logging.*;
+
 class Basicshape {
     double length;
     double breadth;
@@ -61,45 +63,52 @@ class Basicshape {
 
     }
     public static void main(String[] args){
+        Logger l = Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
         while(true){
-            System.out.println("1.Triangle");
-            System.out.println("2.Rectangle");
-            System.out.println("3.circle");
-            System.out.println("4.Exit");
+            l.info("1.Triangle");
+            l.info("2.Rectangle");
+            l.info("3.circle");
+            l.info("4.Exit");
             System.out.print("enter the shape type:");
             String shapetype=sc.next();
             shapetype=shapetype.toLowerCase();
             if(shapetype.equals("triangle")){
-                System.out.println("enter the side1");
+                l.info("enter the side1");
                 double side1=sc.nextDouble();
-                System.out.println("enter the side2");
+                l.info("enter the side2");
                 double side2=sc.nextDouble();
-                System.out.println("enter the side3");
+                l.info("enter the side3");
                 double side3=sc.nextDouble();
-                System.out.println("enter the height");
+                l.info("enter the height");
                 double height=sc.nextDouble();
-                System.out.println("enter the base");
+                l.info("enter the base");
                 double base=sc.nextDouble();
                 Basicshape t=new Basicshape(side1,side2,side3,base,height);
-                System.out.println(t.areA(shapetype));
-                System.out.println(t.perimeteR(shapetype));
+                double x=t.areA(shapetype);
+                l.info(""+x);
+                double y=t.perimeteR(shapetype);
+                l.info(""+y);
             }
             else if(shapetype.equals("rectangle")){
-                System.out.println("enter the length");
+                l.info("enter the length");
                 double length=sc.nextDouble();
-                System.out.println("enter the breadth");
+                l.info("enter the breadth");
                 double breadth=sc.nextDouble();
                 Basicshape re=new Basicshape(length,breadth);
-                System.out.println(re.areA(shapetype));
-                System.out.println(re.perimeteR(shapetype));
+                double z=re.areA(shapetype);
+                l.info(""+z);
+                double k=re.perimeteR(shapetype);
+                l.info(""+k);
             }
             else if(shapetype.equals("circle")){
-                System.out.println("enter the radius");
+                l.info("enter the radius");
                 double radius=sc.nextDouble();
                 Basicshape c=new Basicshape(radius);
-                System.out.println(c.areA(shapetype));
-                System.out.println(c.perimeteR(shapetype));
+                double q=c.areA(shapetype);
+                l.info(""+q);
+                double i=c.perimeteR(shapetype);
+                l.info(""+i);
             }
             else{
                 break;
