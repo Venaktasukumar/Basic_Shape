@@ -70,7 +70,7 @@ class Basicshape {
             l.info("2.Rectangle");
             l.info("3.circle");
             l.info("4.Exit");
-            System.out.print("enter the shape type:");
+            l.info("enter the shape type:");
             String shapetype=sc.next();
             shapetype=shapetype.toLowerCase();
             if(shapetype.equals("triangle")){
@@ -86,9 +86,9 @@ class Basicshape {
                 double base=sc.nextDouble();
                 Basicshape t=new Basicshape(side1,side2,side3,base,height);
                 double x=t.areA(shapetype);
-                l.info(""+x);
+                l.info("the area of triangle:"+x);
                 double y=t.perimeteR(shapetype);
-                l.info(""+y);
+                l.info("the perimeter of triangle:"+y);
             }
             else if(shapetype.equals("rectangle")){
                 l.info("enter the length");
@@ -97,18 +97,18 @@ class Basicshape {
                 double breadth=sc.nextDouble();
                 Basicshape re=new Basicshape(length,breadth);
                 double z=re.areA(shapetype);
-                l.info(""+z);
+                l.info("the area of rectangle:"+z);
                 double k=re.perimeteR(shapetype);
-                l.info(""+k);
+                l.info("the perimeter of rectangle:"+k);
             }
             else if(shapetype.equals("circle")){
                 l.info("enter the radius");
                 double radius=sc.nextDouble();
                 Basicshape c=new Basicshape(radius);
                 double q=c.areA(shapetype);
-                l.info(""+q);
+                l.info("the area of circle:"+q);
                 double i=c.perimeteR(shapetype);
-                l.info(""+i);
+                l.info("the perimeter of circle:"+i);
             }
             else{
                 break;
