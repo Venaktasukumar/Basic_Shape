@@ -99,10 +99,10 @@ class Basicshape {
                 double breadth=sc.nextDouble();
                 Basicshape re=new Basicshape(length,breadth);
                 double z=re.areA(shapetype);
-                String za="the area of rectangle:"+String.valueOf(z);
+                String za="the area of rectangle:"+z;
                 l.info(za);
                 double k=re.perimeteR(shapetype);
-                String ka="the perimeter of rectangle:"+String.valueOf(k);
+                String ka="the perimeter of rectangle:"+k;
                 l.info(ka);
             }
             else if(shapetype.equals("circle")){
