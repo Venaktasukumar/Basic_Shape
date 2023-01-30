@@ -2,7 +2,7 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 
-class Basic_Shape {
+class Basicshape {
     double length;
     double breadth;
     double radius;
@@ -16,15 +16,15 @@ class Basic_Shape {
     String tr="triangle";
     String rec="rectangle";
     String cir="circle";
-    Basic_Shape(double l, double br){
+    Basicshape(double l, double br){
         length=l;
         breadth=br;
     }
-    Basic_Shape(double r){
+    Basicshape(double r){
 
         radius=r;
     }
-     Basic_Shape(double s1, double s2,double s3,double b,double h){
+     Basicshape(double s1, double s2,double s3,double b,double h){
         sidelength1=s1;
         sidelength2=s2;
         sidelength3=s3;
@@ -86,7 +86,7 @@ class Basic_Shape {
                     double height=sc.nextDouble();
                     l.info("enter the base");
                     double base=sc.nextDouble();
-                    Basic_Shape t=new Basic_Shape(side1,side2,side3,base,height);
+                    Basicshape t=new Basicshape(side1,side2,side3,base,height);
                     double x=t.areA(shapetype);
                     String xa="the area of triangle:"+x;
                     l.info(xa);
@@ -99,7 +99,7 @@ class Basic_Shape {
                     double length=sc.nextDouble();
                     l.info("enter the breadth");
                     double breadth=sc.nextDouble();
-                    Basic_Shape re=new Basic_Shape(length,breadth);
+                    Basicshape re=new Basicshape(length,breadth);
                     double z=re.areA(shapetype);
                     String za="the area of rectangle:"+z;
                     l.info(za);
@@ -110,7 +110,7 @@ class Basic_Shape {
                 else if(shapetype.equals("circle")){
                     l.info("enter the radius");
                     double radius=sc.nextDouble();
-                    Basic_Shape c=new Basic_Shape(radius);
+                    Basicshape c=new Basicshape(radius);
                     double q=c.areA(shapetype);
                     String qa="the area of circle:"+q;
                     l.info(qa);
