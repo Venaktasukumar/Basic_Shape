@@ -66,8 +66,7 @@ class Basicshape {
     public static void main(String[] args){
         Logger l = Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        try{
-            while(true){
+        while(true){
                 l.info("1.Triangle");
                 l.info("2.Rectangle");
                 l.info("3.circle");
@@ -126,10 +125,6 @@ class Basicshape {
                     l.info("invalid choice");
                 }
             }
-        }
-        catch(InputMismatchException e){
-            l.info("invalid input "+e);
-        }
         sc.close();
     }
 
